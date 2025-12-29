@@ -4,7 +4,6 @@ import {
   SmartInputApi,
   Editor,
   ErrorBoundary,
-  StyledBlock,
   BlockType,
   Block,
 } from '@smart-input/core';

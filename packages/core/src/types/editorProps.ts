@@ -103,6 +103,8 @@ export interface EditorProps {
   enableLineBreaks?: boolean;
   /** CSS class name to apply to the editor container */
   className?: string;
+  /** Custom CSS class name to apply to the editor area */
+  editorClassName?: string;
   /** Width of embedded images (CSS value, e.g., '200px', '50%') */
   imageWidth?: string;
   /** Height of embedded images (CSS value) */

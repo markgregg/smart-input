@@ -64,6 +64,7 @@ export const Editor: FC<EditorProps> = memo(function Editor({
   documentHeight,
   className,
   placeholder = 'Start typing',
+  editorClassName,
   ...eventHandlers
 }) {
   const preRef = useRef<HTMLPreElement | null>(null);
@@ -390,6 +391,7 @@ export const Editor: FC<EditorProps> = memo(function Editor({
         onUndo={handleUndo}
         enableLineBreaks={enableLineBreaks}
         placeholder={placeholder}
+        className={editorClassName}
       />
     </div>
   );
