@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/core"
+    },
+    {
+      "path": "./packages/dropcontent"
+    },
+    {
+      "path": "./packages/typeahead"
+    },
+    {
+      "path": "./packages/test"
+    }
+  ]
+}

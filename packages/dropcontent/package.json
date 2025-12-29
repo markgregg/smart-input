@@ -1,0 +1,93 @@
+{
+  "name": "@smart-input/dropcontent",
+  "version": "0.0.7",
+  "description": "Drag and drop content handler for building rich input experiences with file and content drops",
+  "keywords": [
+    "react",
+    "drag drop",
+    "input",
+    "drag-and-drop",
+    "dnd",
+    "content",
+    "typescript",
+    "component",
+    "react-component",
+    "file-upload"
+  ],
+  "author": "Mark Gregg <gregg.mark@gmail.com> (https://github.com/markgregg)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markgregg/open-input.git",
+    "directory": "packages/dropcontent"
+  },
+  "homepage": "https://github.com/markgregg/open-input#readme",
+  "bugs": {
+    "url": "https://github.com/markgregg/open-input/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "dist/dropcontent.mjs",
+  "module": "dist/dropcontent.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/dropcontent.mjs",
+      "require": "./dist/dropcontent.js"
+    },
+    "./style.css": "./dist/dropcontent.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.less"
+  ],
+  "scripts": {
+    "build": "tsc && vite build --mode debug && vite build --emptyOutDir false",
+    "build:prod": "tsc && vite build --mode production && vite build --emptyOutDir false",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "prettier": "prettier --write src",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.0",
+    "@nabla/vite-plugin-eslint": "2.0.6",
+    "@types/node": "24.9.2",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@typescript-eslint/eslint-plugin": "8.46.2",
+    "@typescript-eslint/parser": "8.46.2",
+    "@vitejs/plugin-react": "5.1.0",
+    "classnames": "2.5.1",
+    "eslint": "9.39.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "globals": "16.5.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript-eslint": "8.46.2",
+    "vite": "7.1.12",
+    "vite-plugin-dts": "4.5.4",
+    "vite-plugin-lib-inject-css": "2.2.2",
+    "zustand": "5.0.2"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^5.0.0",
+    "@smart-input/core": "workspace:*"
+  }
+}

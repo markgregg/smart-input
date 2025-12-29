@@ -1,0 +1,25 @@
+{
+  "all": true,
+  "include": ["packages/*/src/**/*.ts", "packages/*/src/**/*.tsx"],
+  "exclude": [
+    "**/*.d.ts",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.config.ts",
+    "**/vite-env.d.ts",
+    "packages/test/**",
+    "examples/**",
+    "node_modules/**",
+    "dist/**"
+  ],
+  "reporter": ["html", "text", "lcov", "json"],
+  "report-dir": "coverage",
+  "temp-dir": ".nyc_output",
+  "check-coverage": true,
+  "lines": 0.5,
+  "statements": 0.5,
+  "functions": 0.2,
+  "branches": 0.1
+}

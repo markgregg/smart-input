@@ -1,0 +1,29 @@
+.user-mention {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0 2px;
+  white-space: nowrap;
+}
+
+.user-mention:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.mention-avatar {
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.mention-username {
+  line-height: 1;
+}

@@ -1,0 +1,47 @@
+# EditorConfig helps maintain consistent coding styles across different editors
+# https://editorconfig.org
+
+root = true
+
+# All files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# TypeScript, JavaScript, JSON
+[*.{ts,tsx,js,jsx,json,jsonc}]
+indent_style = space
+indent_size = 2
+
+# CSS, LESS
+[*.{css,less}]
+indent_style = space
+indent_size = 2
+
+# Markdown
+[*.md]
+trim_trailing_whitespace = false
+indent_style = space
+indent_size = 2
+
+# YAML
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Package manager files
+[{package.json,pnpm-workspace.yaml}]
+indent_style = space
+indent_size = 2
+
+# Configuration files
+[*.config.{ts,js,mjs}]
+indent_style = space
+indent_size = 2
+
+# Cucumber feature files
+[*.feature]
+indent_style = space
+indent_size = 2

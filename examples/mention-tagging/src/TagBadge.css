@@ -1,0 +1,29 @@
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 8px;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0 2px;
+  white-space: nowrap;
+}
+
+.tag-badge:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tag-hash {
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tag-name {
+  line-height: 1;
+}

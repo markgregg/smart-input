@@ -1,0 +1,25 @@
+{
+  "recommendations": [
+    // TypeScript and JavaScript
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+
+    // Testing
+    "vitest.explorer",
+    "ms-playwright.playwright",
+
+    // Git
+    "eamodio.gitlens",
+
+    // Documentation
+    "yzhang.markdown-all-in-one",
+
+    // Package Management
+    "christian-kohler.npm-intellisense",
+
+    // Utilities
+    "usernamehw.errorlens",
+    "streetsidesoftware.code-spell-checker",
+    "EditorConfig.EditorConfig"
+  ]
+}

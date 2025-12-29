@@ -1,0 +1,86 @@
+{
+  "name": "@smart-input/dragblocks",
+  "version": "0.0.7",
+  "description": "Drag and drop styled blocks handler for building interactive content editors",
+  "keywords": [
+    "react",
+    "drag drop",
+    "blocks",
+    "input",
+    "drag-and-drop",
+    "dnd",
+    "typescript",
+    "component",
+    "react-component",
+    "contenteditable"
+  ],
+  "author": "Mark Gregg <gregg.mark@gmail.com> (https://github.com/markgregg)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markgregg/open-input.git",
+    "directory": "packages/dragblocks"
+  },
+  "homepage": "https://github.com/markgregg/open-input#readme",
+  "bugs": {
+    "url": "https://github.com/markgregg/open-input/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "dist/dragblocks.mjs",
+  "module": "dist/dragblocks.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/dragblocks.mjs",
+      "require": "./dist/dragblocks.js"
+    },
+    "./style.css": "./dist/dragblocks.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.less"
+  ],
+  "scripts": {
+    "build": "tsc && vite build --mode debug && vite build --emptyOutDir false",
+    "build:prod": "tsc && vite build --mode production && vite build --emptyOutDir false",
+    "dev": "vite build --watch --mode development",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "prettier": "prettier --write src"
+  },
+  "peerDependencies": {
+    "@smart-input/core": "workspace:*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@nabla/vite-plugin-eslint": "^2.0.6",
+    "@smart-input/core": "workspace:*",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.16.0",
+    "less": "^4.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.7.2",
+    "vite": "^7.1.1",
+    "vite-plugin-dts": "^4.3.0",
+    "vite-plugin-lib-inject-css": "^2.1.1"
+  }
+}

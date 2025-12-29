@@ -1,0 +1,42 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "packages/core/src/index.ts",
+    "packages/typeahead/src/index.ts",
+    "packages/reactblocks/src/index.ts",
+    "packages/dragblocks/src/index.ts",
+    "packages/dropcontent/src/index.ts",
+    "packages/commitnotifier/src/index.ts"
+  ],
+  "entryPointStrategy": "packages",
+  "out": "docs/api",
+  "name": "Open Input API Documentation",
+  "includeVersion": true,
+  "readme": "README.md",
+  "excludePrivate": true,
+  "excludeProtected": false,
+  "excludeInternal": true,
+  "categorizeByGroup": true,
+  "defaultCategory": "Other",
+  "categoryOrder": ["Components", "Hooks", "Types", "State", "Utils", "*"],
+  "sort": ["source-order"],
+  "visibilityFilters": {
+    "protected": false,
+    "private": false,
+    "inherited": true,
+    "external": false
+  },
+  "searchInComments": true,
+  "plugin": [],
+  "theme": "default",
+  "lightHighlightTheme": "light-plus",
+  "darkHighlightTheme": "dark-plus",
+  "navigation": {
+    "includeCategories": true,
+    "includeGroups": true,
+    "includeFolders": false
+  },
+  "githubPages": true,
+  "hideGenerator": false,
+  "cleanOutputDir": true
+}

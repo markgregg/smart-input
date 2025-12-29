@@ -1,0 +1,143 @@
+{
+  "name": "smart-input",
+  "version": "0.0.7",
+  "description": "Powerful and flexible content-editable input components for React with rich text editing, mentions, and extensibility",
+  "keywords": [
+    "react",
+    "input",
+    "editor",
+    "contenteditable",
+    "rich-text",
+    "typescript",
+    "monorepo",
+    "components",
+    "wysiwyg",
+    "mention-input",
+    "mentions",
+    "react-component",
+    "text-editor",
+    "autocomplete",
+    "typeahead"
+  ],
+  "author": "Mark Gregg <gregg.mark@gmail.com> (https://github.com/markgregg)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markgregg/open-input.git"
+  },
+  "homepage": "https://github.com/markgregg/open-input#readme",
+  "bugs": {
+    "url": "https://github.com/markgregg/open-input/issues"
+  },
+  "packageManager": "pnpm@10.25.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @smart-input/test dev",
+    "dev:all": "pnpm --parallel --filter \"./examples/*\" dev",
+    "build": "turbo run build",
+    "build:prod": "turbo run build:prod",
+    "clean": "node scripts/clean.js",
+    "type-check": "turbo run type-check",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "prettier": "turbo run prettier",
+    "format:check": "turbo run prettier -- --check",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "test:e2e": "pnpm build && pnpm --filter @smart-input/test test:e2e",
+    "test:e2e:ui": "pnpm build && pnpm --filter @smart-input/test test:e2e:ui",
+    "test:all": "pnpm test && pnpm test:e2e",
+    "test:coverage:combined": "node scripts/combined-coverage.js",
+    "ladle": "ladle serve",
+    "ladle:build": "ladle build",
+    "example:chat": "pnpm --filter chat-input-example dev",
+    "example:mention": "pnpm --filter mention-tagging-example dev",
+    "docs:api": "typedoc",
+    "docs:serve": "npx http-server docs/api -p 8080 -o",
+    "size": "size-limit",
+    "size:why": "size-limit --why",
+    "analyze": "cross-env ANALYZE=true pnpm build:prod",
+    "analyze:package": "cross-env ANALYZE=true pnpm --filter",
+    "verify:treeshake": "node scripts/verify-treeshaking.js",
+    "benchmark": "node scripts/benchmark.js",
+    "bench": "vitest bench",
+    "prepare": "husky",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build:prod && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "2.29.8",
+    "@commitlint/cli": "19.6.0",
+    "@commitlint/config-conventional": "19.6.0",
+    "@cucumber/cucumber": "12.3.0",
+    "@eslint/js": "9.39.0",
+    "@ladle/react": "5.1.1",
+    "@nabla/vite-plugin-eslint": "2.0.6",
+    "@playwright/test": "1.57.0",
+    "@size-limit/file": "12.0.0",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.1",
+    "@testing-library/user-event": "14.6.1",
+    "@types/eslint-plugin-jsx-a11y": "6.10.1",
+    "@types/node": "24.9.2",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@typescript-eslint/eslint-plugin": "8.46.2",
+    "@typescript-eslint/parser": "8.46.2",
+    "@vitejs/plugin-react": "5.1.0",
+    "@vitest/coverage-istanbul": "4.0.16",
+    "@vitest/coverage-v8": "4.0.16",
+    "@vitest/ui": "4.0.16",
+    "classnames": "2.5.1",
+    "cross-env": "10.1.0",
+    "eslint": "9.39.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "globals": "16.5.0",
+    "husky": "9.1.7",
+    "jiti": "2.6.1",
+    "jsdom": "27.4.0",
+    "less": "4.4.2",
+    "lint-staged": "15.2.11",
+    "nyc": "17.1.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "rimraf": "6.1.2",
+    "rollup-plugin-visualizer": "6.0.5",
+    "shx": "0.4.0",
+    "size-limit": "12.0.0",
+    "ts-node": "10.9.2",
+    "turbo": "2.7.2",
+    "typedoc": "0.27.6",
+    "typescript-eslint": "8.46.2",
+    "vite": "7.1.12",
+    "vite-plugin-dts": "4.5.4",
+    "vite-plugin-istanbul": "7.2.1",
+    "vite-plugin-lib-inject-css": "2.2.2",
+    "vite-tsconfig-paths": "6.0.3",
+    "vitest": "4.0.16"
+  },
+  "peerDependencies": {
+    "zustand": "^5.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
+}

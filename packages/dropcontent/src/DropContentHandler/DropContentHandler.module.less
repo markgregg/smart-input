@@ -1,0 +1,56 @@
+.dropZone {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.dragging {
+  opacity: 0.95;
+}
+
+.dropIndicator {
+  position: absolute;
+  width: 3px;
+  background: linear-gradient(to bottom, #007acc, #0098ff);
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 0 6px rgba(0, 122, 204, 0.8);
+  animation: pulse 1s ease-in-out infinite;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -4px;
+    width: 11px;
+    height: 11px;
+    background-color: #007acc;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -4px;
+    width: 11px;
+    height: 11px;
+    background-color: #007acc;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}

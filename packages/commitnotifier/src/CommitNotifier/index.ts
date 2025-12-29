@@ -1,0 +1,1 @@
+export { CommitNotifier } from './CommitNotifier';

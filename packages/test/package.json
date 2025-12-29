@@ -1,0 +1,61 @@
+{
+  "name": "@smart-input/test",
+  "version": "0.0.7",
+  "private": true,
+  "description": "Test application and E2E tests for multi-style-input",
+  "keywords": [
+    "testing",
+    "e2e",
+    "playwright",
+    "cucumber",
+    "test-app"
+  ],
+  "author": "Mark Gregg <gregg.mark@gmail.com> (https://github.com/markgregg)",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "prettier": "prettier --write src",
+    "test:e2e": "cucumber-js tests/features --require-module ts-node/register --require \"tests/hooks/**/*.ts\" --require \"tests/steps/**/*.steps.ts\"",
+    "test:e2e:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.11.0",
+    "@cucumber/cucumber": "12.3.0",
+    "@cucumber/html-formatter": "22.3.0",
+    "@eslint/js": "9.39.0",
+    "@nabla/vite-plugin-eslint": "2.0.6",
+    "@playwright/test": "1.57.0",
+    "@types/eslint-plugin-jsx-a11y": "6.10.1",
+    "@types/node": "24.9.2",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@typescript-eslint/eslint-plugin": "8.46.2",
+    "@typescript-eslint/parser": "8.46.2",
+    "@vitejs/plugin-react": "5.1.0",
+    "classnames": "2.5.1",
+    "cross-env": "10.1.0",
+    "eslint": "9.39.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "globals": "16.5.0",
+    "jiti": "2.6.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "ts-node": "10.9.2",
+    "typescript-eslint": "8.46.2",
+    "vite": "7.1.12"
+  },
+  "dependencies": {
+    "@smart-input/commitnotifier": "workspace:*",
+    "@smart-input/core": "workspace:*",
+    "@smart-input/dragblocks": "workspace:*",
+    "@smart-input/dropcontent": "workspace:*",
+    "@smart-input/reactblocks": "workspace:*",
+    "@smart-input/typeahead": "workspace:*",
+    "zustand": "5.0.2"
+  }
+}

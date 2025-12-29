@@ -1,0 +1,79 @@
+{
+  "name": "@smart-input/reactblocks",
+  "version": "0.0.7",
+  "description": "React component blocks with portal rendering for advanced input customization",
+  "keywords": [
+    "react",
+    "blocks",
+    "portal",
+    "input",
+    "rendering",
+    "typescript",
+    "component",
+    "react-component",
+    "react-portal"
+  ],
+  "author": "Mark Gregg <gregg.mark@gmail.com> (https://github.com/markgregg)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markgregg/open-input.git",
+    "directory": "packages/reactblocks"
+  },
+  "homepage": "https://github.com/markgregg/open-input#readme",
+  "bugs": {
+    "url": "https://github.com/markgregg/open-input/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "dist/reactblocks.min.js",
+  "module": "dist/reactblocks.min.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/reactblocks.min.mjs",
+      "require": "./dist/reactblocks.min.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.less"
+  ],
+  "scripts": {
+    "build": "tsc && vite build --mode debug && vite build --emptyOutDir false",
+    "build:prod": "tsc && vite build --mode production && vite build --emptyOutDir false",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "prettier": "prettier --write src",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@smart-input/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "5.1.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "less": "4.4.2",
+    "typescript": "5.6.2",
+    "vite": "7.1.12",
+    "vite-plugin-dts": "4.5.4",
+    "vite-plugin-lib-inject-css": "2.2.2"
+  }
+}
