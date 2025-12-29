@@ -102,7 +102,8 @@ export const UnmanagedEditor = memo(
     );
 
     const updateCursorPosition = useCallback(() => {
-      const range = getSelectionRange();
+      if (!preRef.current) return;
+      const range = getSelectionRange(preRef.current);
       if (range) {
         const { characterPosition, rect } = getPositionAndRect(
           range,
@@ -124,8 +125,8 @@ export const UnmanagedEditor = memo(
           event.preventDefault();
           return;
         }
-        updateCursorPosition();
         onChange(event.key === 'Enter');
+        updateCursorPosition();
       },
       [updateCursorPosition, onChange, enableLineBreaks, selectionInProgress],
     );

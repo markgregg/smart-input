@@ -288,7 +288,7 @@ export const Editor: FC<EditorProps> = memo(function Editor({
         preElement.removeChild(lastChild);
       }
     }
-    const range = getSelectionRange();
+    const range = getSelectionRange(preElement);
     const position = range ? getCursorPosition(preElement, range) : 0;
     if (position !== characterPosition) {
       setCursorPosition(preElement, characterPosition);

@@ -278,9 +278,24 @@ const preContainsNode = (
   return false;
 };
 
-const getSelectionRange = () => {
+const getSelectionRange = (preElement: HTMLPreElement) => {
   const selection = document.getSelection();
-  if (selection && selection.rangeCount > 0) {
+  if (!selection) return null;
+  if (selection.anchorNode === preElement && preElement.lastChild) {
+    const range = document.createRange();
+    if (preElement.lastChild) {
+      if (preElement.lastChild.nodeType === Node.ELEMENT_NODE) {
+        range.setStartAfter(preElement.lastChild);
+      } 
+      // If it's a text node, place cursor at the end of the text
+      else if (preElement.lastChild.nodeType === Node.TEXT_NODE) {
+        range.setStart(preElement.lastChild, (preElement.lastChild as Text).length);
+      }
+      range.collapse(true);
+      return range;
+    }   
+  }
+  if (selection.rangeCount > 0) {
     return selection.getRangeAt(0);
   }
   return null;
@@ -329,7 +344,7 @@ const insertCarridgeReturnInString = (text: string, offset: number) => {
 };
 
 const insertCarridgeReturn = (pre: HTMLPreElement, blocks: Block[]) => {
-  const range = getSelectionRange();
+  const range = getSelectionRange(pre);
   const characterPosition = range ? getCursorPosition(pre, range) : 0;
   const { index, block, offset } = getBlockAndOffset(characterPosition, blocks);
   if (

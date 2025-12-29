@@ -97,7 +97,7 @@ export const Api = forwardRef<SmartInputApi>(function Api(_, ref) {
       },
       getCursorPosition: (): number => {
         if (!element) return 0;
-        const range = getSelectionRange();
+        const range = getSelectionRange(element);
         if (!range) return 0;
         return getCursorPosition(element, range);
       },
