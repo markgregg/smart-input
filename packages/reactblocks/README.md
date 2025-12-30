@@ -11,6 +11,10 @@ The ReactBlocks package allows you to attach React components to **styled blocks
 3. The React component is rendered via Portal into the StyledBlock's DOM element
 4. When the StyledBlock is removed, the React component should also be unregistered
 
+## 🚀 Live Demo
+
+Try the interactive examples online: **[https://markgregg.github.io/smart-input/](https://markgregg.github.io/smart-input/)**
+
 ## Installation
 
 ```bash

@@ -10,6 +10,10 @@ A React component that enables drag-and-drop reordering of styled blocks within 
 - 🔒 Plain text blocks remain fixed and cannot be dragged
 - ⚡ Integrates seamlessly with @smart-input/core state management
 
+## 🚀 Live Demo
+
+Try the interactive examples online: **[https://markgregg.github.io/smart-input/](https://markgregg.github.io/smart-input/)**
+
 ## Installation
 
 ```bash

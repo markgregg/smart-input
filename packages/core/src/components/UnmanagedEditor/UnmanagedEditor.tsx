@@ -85,6 +85,35 @@ export const UnmanagedEditor = memo(
             }
           }
         }
+        if (event.key === 'Backspace') {
+          const selection = document.getSelection();
+          if (selection && selection.rangeCount > 0 && selection.isCollapsed) {
+            const range = selection.getRangeAt(0);
+            const startContainer = range.startContainer;
+            // Check if the block at the current position is editable
+            let isEditable = true;
+            let element: Node | null = startContainer;
+            while (element) {
+              if (
+                element.nodeType === Node.ELEMENT_NODE &&
+                (element as HTMLElement).contentEditable === 'false'
+              ) {
+                isEditable = false;
+                break;
+              }
+              element = element.parentNode;
+            }
+            if (isEditable && range.startOffset > 0) {
+              // Delete the previous character
+              range.setStart(startContainer, range.startOffset - 1);
+              range.deleteContents();
+              event.preventDefault();
+              event.stopPropagation();
+              onChange();
+              updateCursorPosition();
+            }
+          }
+        }
         if (
           event.key === 'Enter' &&
           (selectionInProgress || !enableLineBreaks)
@@ -98,7 +127,7 @@ export const UnmanagedEditor = memo(
           return;
         }
       },
-      [onUndo, selectionInProgress, enableLineBreaks, keyHandlers],
+      [onUndo, selectionInProgress, enableLineBreaks, keyHandlers, onChange],
     );
 
     const updateCursorPosition = useCallback(() => {

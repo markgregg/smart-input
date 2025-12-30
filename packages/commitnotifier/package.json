@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/commitnotifier",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Commit notification component for tracking and notifying content changes in smart inputs",
   "keywords": [
     "react",

@@ -12,6 +12,10 @@ The core package for Open Input - a powerful, extensible React rich text input c
 - 📱 **Responsive** - Works on desktop and mobile
 - ♿ **Accessible** - WCAG 2.1 AA compliant with ARIA support
 
+## 🚀 Live Demo
+
+Try the interactive examples online: **[https://markgregg.github.io/smart-input/](https://markgregg.github.io/smart-input/)**
+
 ## Installation
 
 ```bash

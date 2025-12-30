@@ -11,6 +11,10 @@ A commit/submit functionality component for the Open Input editor with message h
 - 🔄 **State Management** - Seamless integration with Open Input state
 - 🎯 **Customizable** - Flexible callbacks and configuration options
 
+## 🚀 Live Demo
+
+Try the interactive examples online: **[https://markgregg.github.io/smart-input/](https://markgregg.github.io/smart-input/)**
+
 ## Installation
 
 ```bash
