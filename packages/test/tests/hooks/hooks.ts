@@ -129,10 +129,52 @@ BeforeAll({ timeout: 60000 }, async function () {
 });
 
 AfterAll(async function () {
-  // Stop the dev server
-  if (devServer) {
+  // Stop the dev server by killing processes on port 3001
+  try {
     console.log('Stopping dev server...');
-    devServer.kill();
+    const isWindows = process.platform === 'win32';
+
+    if (isWindows) {
+      const { stdout } = await execAsync(
+        'netstat -ano | findstr :3001 | findstr LISTENING',
+      );
+      const lines = stdout.trim().split('\n');
+      for (const line of lines) {
+        const match = line.match(/\s+(\d+)$/);
+        if (match) {
+          const pid = match[1];
+          console.log(`Killing process ${pid} on port 3001...`);
+          try {
+            await execAsync(`taskkill /F /PID ${pid}`);
+          } catch {
+            // Ignore errors if process is already gone
+          }
+        }
+      }
+    } else {
+      // Unix-like systems (Linux, macOS)
+      try {
+        const { stdout } = await execAsync('lsof -ti:3001');
+        const pids = stdout.trim().split('\n').filter(Boolean);
+        for (const pid of pids) {
+          console.log(`Killing process ${pid} on port 3001...`);
+          try {
+            await execAsync(`kill -9 ${pid}`);
+          } catch {
+            // Ignore errors if process is already gone
+          }
+        }
+      } catch {
+        // lsof command might not exist or no processes found
+      }
+    }
+  } catch {
+    // Ignore errors
+  }
+
+  // Also try to kill the direct child process if it still exists
+  if (devServer) {
+    devServer.kill('SIGKILL');
     devServer = null;
   }
 });
