@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Core contenteditable components for building rich text input experiences in React",
   "keywords": [
     "react",
@@ -34,14 +34,14 @@
   "engines": {
     "node": ">=20.19.0"
   },
-  "main": "dist/core.min.mjs",
-  "module": "dist/core.mjs",
+  "main": "dist/core.min.js",
+  "module": "dist/core.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/core.mjs",
-      "require": "./dist/core.min.mjs"
+      "import": "./dist/core.js",
+      "require": "./dist/core.min.js"
     },
     "./style.css": "./dist/core.min.css"
   },
