@@ -4,14 +4,24 @@ interface FilterPillProps {
   field: string;
   operator: string;
   value: string;
+  onDelete?: () => void;
 }
 
-function FilterPill({ field, operator, value }: FilterPillProps) {
+function FilterPill({ field, operator, value, onDelete }: FilterPillProps) {
   return (
     <span className="filter-pill">
       <span className="pill-field">{field}</span>
       <span className="pill-operator">{operator}</span>
       <span className="pill-value">{value}</span>
+      {onDelete && (
+        <button
+          className="pill-delete"
+          onClick={onDelete}
+          aria-label="Remove filter"
+        >
+          ×
+        </button>
+      )}
     </span>
   );
 }

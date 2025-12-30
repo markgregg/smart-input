@@ -12,11 +12,11 @@
       "sourceMaps": true
     },
     {
-      "name": "Launch Chrome - Filter Sentence Example",
+      "name": "Launch Chrome - Smart Input Example",
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:3001",
-      "webRoot": "${workspaceFolder}/examples/filter-sentence",
+      "webRoot": "${workspaceFolder}/examples/smart-input-examples",
       "sourceMaps": true,
       "resolveSourceMapLocations": null,
       "sourceMapPathOverrides": {
@@ -25,7 +25,7 @@
         "packages/*/src/*": "${workspaceFolder}/packages/*/src/*",
         "@smart-input/*/src/*": "${workspaceFolder}/packages/*/src/*"
       },
-      "preLaunchTask": "npm: example:filter"
+      "preLaunchTask": "npm: examples"
     },
     {
       "name": "Launch Chrome - Ladle",

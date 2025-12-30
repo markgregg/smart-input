@@ -57,6 +57,21 @@ function FilterSentenceApp() {
   const apiRef = useRef<SmartInputApi>(null);
   const blockCounterRef = useRef(0);
 
+  const removePill = (pillId: string) => {
+    /* Beware of having stale state if you reference a function on a react block that isn't updated*/
+    setReactBlocks((blks) => blks.filter((rb) => rb.blockId !== pillId));
+    setBlocks((blks) =>
+      blks.filter((block) => !('id' in block) || block.id !== pillId),
+    );
+    apiRef.current?.apply((api) => {
+      api.setBlocks(
+        api
+          .getBlocks()
+          .filter((block) => !('id' in block) || block.id !== pillId),
+      );
+    });
+  };
+
   // Lookup function for filter components
   const filterLookup = async (query: string) => {
     if (currentStep === 'field') {
@@ -201,6 +216,7 @@ function FilterSentenceApp() {
               field={selectedField.name}
               operator={selectedOperator}
               value={selectedValue}
+              onDelete={() => removePill(pillId)}
             />
           ),
         },
