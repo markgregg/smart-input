@@ -219,10 +219,6 @@ importers:
         version: 6.0.3(typescript@5.9.3)(vite@7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
 
   packages/commitnotifier:
-    dependencies:
-      '@smart-input/core':
-        specifier: '>0.0.1'
-        version: 1.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zustand@5.0.2(@types/react@18.3.12)(react@18.3.1))
     devDependencies:
       '@eslint/js':
         specifier: 9.39.0
@@ -230,6 +226,9 @@ importers:
       '@nabla/vite-plugin-eslint':
         specifier: 2.0.6
         version: 2.0.6(eslint@9.39.0(jiti@2.6.1))(vite@7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
+      '@smart-input/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/node':
         specifier: 24.9.2
         version: 24.9.2
@@ -359,14 +358,13 @@ importers:
         version: 5.0.2(@types/react@18.3.12)(react@18.3.1)
 
   packages/dragblocks:
-    dependencies:
-      '@smart-input/core':
-        specifier: '>0.0.1'
-        version: 1.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zustand@5.0.2(@types/react@18.3.12)(react@18.3.1))
     devDependencies:
       '@nabla/vite-plugin-eslint':
         specifier: ^2.0.6
         version: 2.0.6(eslint@9.39.0(jiti@2.6.1))(vite@7.1.12(@types/node@22.19.3)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
+      '@smart-input/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/node':
         specifier: ^22.10.2
         version: 22.19.3
@@ -405,10 +403,6 @@ importers:
         version: 2.2.2(vite@7.1.12(@types/node@22.19.3)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
 
   packages/dropcontent:
-    dependencies:
-      '@smart-input/core':
-        specifier: '>0.0.1'
-        version: 1.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zustand@5.0.2(@types/react@18.3.12)(react@18.3.1))
     devDependencies:
       '@eslint/js':
         specifier: 9.39.0
@@ -416,6 +410,9 @@ importers:
       '@nabla/vite-plugin-eslint':
         specifier: 2.0.6
         version: 2.0.6(eslint@9.39.0(jiti@2.6.1))(vite@7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
+      '@smart-input/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/node':
         specifier: 24.9.2
         version: 24.9.2
@@ -475,11 +472,10 @@ importers:
         version: 5.0.2(@types/react@18.3.12)(react@18.3.1)
 
   packages/reactblocks:
-    dependencies:
-      '@smart-input/core':
-        specifier: '>0.0.1'
-        version: 1.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zustand@5.0.2(@types/react@18.3.12)(react@18.3.1))
     devDependencies:
+      '@smart-input/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/react':
         specifier: 18.3.12
         version: 18.3.12
@@ -615,10 +611,6 @@ importers:
         version: 7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2)
 
   packages/typeahead:
-    dependencies:
-      '@smart-input/core':
-        specifier: '>0.0.1'
-        version: 1.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zustand@5.0.2(@types/react@18.3.12)(react@18.3.1))
     devDependencies:
       '@eslint/js':
         specifier: 9.39.0
@@ -626,6 +618,9 @@ importers:
       '@nabla/vite-plugin-eslint':
         specifier: 2.0.6
         version: 2.0.6(eslint@9.39.0(jiti@2.6.1))(vite@7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
+      '@smart-input/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/node':
         specifier: 24.9.2
         version: 24.9.2
@@ -1660,14 +1655,6 @@ packages:
     engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
     peerDependencies:
       size-limit: 12.0.0
-
-  '@smart-input/core@1.0.1':
-    resolution: {integrity: sha512-6s9CO/FOZFGseK8IM/koaPuxW2SJf0fRFLZLhZpDyHL1g9YIyU7M5nWIK8ql0yKszcp8IjWWpcNAF8VJiPSyCQ==}
-    engines: {node: '>=20.19.0'}
-    peerDependencies:
-      react: ^18.0.0 || ^19.0.0
-      react-dom: ^18.0.0 || ^19.0.0
-      zustand: '>5.0.0'
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
@@ -6966,15 +6953,6 @@ snapshots:
   '@size-limit/file@12.0.0(size-limit@12.0.0(jiti@2.6.1))':
     dependencies:
       size-limit: 12.0.0(jiti@2.6.1)
-
-  '@smart-input/core@1.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zustand@5.0.2(@types/react@18.3.12)(react@18.3.1))':
-    dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-icons: 5.5.0(react@18.3.1)
-      react-style-stringify: 1.2.0
-      uuid: 13.0.0
-      zustand: 5.0.2(@types/react@18.3.12)(react@18.3.1)
 
   '@standard-schema/spec@1.1.0': {}
 
