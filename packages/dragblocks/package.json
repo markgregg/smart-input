@@ -18,12 +18,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/markgregg/open-input.git",
+    "url": "https://github.com/markgregg/smart-input.git",
     "directory": "packages/dragblocks"
   },
-  "homepage": "https://github.com/markgregg/open-input#readme",
+  "homepage": "https://github.com/markgregg/smart-input#readme",
   "bugs": {
-    "url": "https://github.com/markgregg/open-input/issues"
+    "url": "https://github.com/markgregg/smart-input/issues"
   },
   "publishConfig": {
     "access": "public",

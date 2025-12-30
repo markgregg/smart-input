@@ -129,7 +129,7 @@ Coverage is automatically uploaded to Codecov in CI for the `main` branch.
 
 2. **Check coverage for specific packages**:
    ```bash
-   pnpm --filter @open-input/core test:coverage
+   pnpm --filter @smart-input/core test:coverage
    ```
 
 3. **Don't commit coverage files**:
