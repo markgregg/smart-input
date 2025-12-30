@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { resolve, dirname, relative } from 'path';
 import { UserConfig, PluginOption } from 'vite';
 import eslintPlugin from '@nabla/vite-plugin-eslint';
 import react from '@vitejs/plugin-react';
@@ -88,7 +88,7 @@ export function createLibraryConfig(
       },
     },
     build: {
-      sourcemap: true,
+      sourcemap: debug ? 'inline' : true,
       lib: {
         entry: resolve(config.packageDir, 'src/index.ts'),
         name: config.libraryName,
@@ -103,7 +103,6 @@ export function createLibraryConfig(
           'react',
           'react-dom',
           'react/jsx-runtime',
-          '@smart-input/core',
           ...Object.keys(config.peerDependencies),
         ],
         output: {

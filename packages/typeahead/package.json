@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/typeahead",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Typeahead autocomplete and lookup component for building smart input experiences",
   "keywords": [
     "react",
@@ -40,7 +40,7 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/typeahead.mjs",
-      "require": "./dist/typeahead.js"
+      "require": "./dist/typeahead.mjs"
     },
     "./style.css": "./dist/typeahead.css"
   },
