@@ -34,7 +34,7 @@ jobs:
       run: pnpm lint
     
     - name: Build packages
-      run: pnpm build:prod
+      run: pnpm build && pnpm build:prod
     
     - name: Install Playwright Browsers
       run: pnpm --filter @open-input/test exec playwright install --with-deps
