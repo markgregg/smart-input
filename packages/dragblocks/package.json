@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/dragblocks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Drag and drop styled blocks handler for building interactive content editors",
   "keywords": [
     "react",
@@ -39,7 +39,7 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/dragblocks.mjs",
-      "require": "./dist/dragblocks.js"
+      "require": "./dist/dragblocks.mjs"
     },
     "./style.css": "./dist/dragblocks.css"
   },

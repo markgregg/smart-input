@@ -88,7 +88,7 @@ jobs:
     needs: test
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     permissions:
-      contents: read
+      contents: write
       packages: write
     
     steps:
@@ -112,6 +112,15 @@ jobs:
     
     - name: Build packages
       run: pnpm build:prod
+    
+    - name: Build examples
+      run: cd examples/smart-input-examples && pnpm build
+    
+    - name: Deploy examples to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: examples/smart-input-examples/dist
     
     - name: Publish to NPM
       run: pnpm release
