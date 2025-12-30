@@ -37,6 +37,7 @@ export function createLibraryConfig(
   plugins.push(
     dts({
       include: ['src'],
+      exclude: ['src/__bench__/**'],
       copyDtsFiles: true,
       tsconfigPath: 'tsconfig.build.json',
     }),
@@ -66,8 +67,8 @@ export function createLibraryConfig(
   const fileName = config.customFileName
     ? config.customFileName
     : debug
-    ? config.projectName
-    : `${config.projectName}.min`;
+      ? config.projectName
+      : `${config.projectName}.min`;
 
   return {
     define: {

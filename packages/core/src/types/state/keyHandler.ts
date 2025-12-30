@@ -1,4 +1,4 @@
-import { KeyCombination } from "../editorProps";
+import { KeyCombination } from '../editorProps';
 
 export interface KeyHandlerState {
   /* return true to stop the event default and bubbling */

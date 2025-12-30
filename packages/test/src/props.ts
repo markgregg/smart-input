@@ -1,4 +1,5 @@
-import { CommitNotifierProps, EditorProps } from '@smart-input/core';
+import { CommitNotifierProps } from '@smart-input/commitnotifier';
+import { EditorProps } from '@smart-input/core';
 import { TypeaheadLookupProps } from '@smart-input/typeahead';
 
 export type TestProps = {

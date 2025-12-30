@@ -286,14 +286,17 @@ const getSelectionRange = (preElement: HTMLPreElement) => {
     if (preElement.lastChild) {
       if (preElement.lastChild.nodeType === Node.ELEMENT_NODE) {
         range.setStartAfter(preElement.lastChild);
-      } 
+      }
       // If it's a text node, place cursor at the end of the text
       else if (preElement.lastChild.nodeType === Node.TEXT_NODE) {
-        range.setStart(preElement.lastChild, (preElement.lastChild as Text).length);
+        range.setStart(
+          preElement.lastChild,
+          (preElement.lastChild as Text).length,
+        );
       }
       range.collapse(true);
       return range;
-    }   
+    }
   }
   if (selection.rangeCount > 0) {
     return selection.getRangeAt(0);
@@ -313,7 +316,7 @@ const getBlockAndOffset = (position: number, blocks: Block[]) => {
     if (b.type !== BlockType.Text && b.type !== BlockType.Styled) {
       continue;
     }
-    const len = 'text' in b ? b.text?.length ?? 0 : 0;
+    const len = 'text' in b ? (b.text?.length ?? 0) : 0;
     if (pos <= len) {
       return { index: i, offset: pos, block: b };
     }
@@ -329,11 +332,11 @@ const getBlockAndOffset = (position: number, blocks: Block[]) => {
   const lastLen =
     last.type === BlockType.Text
       ? 'text' in last
-        ? last.text?.length ?? 0
+        ? (last.text?.length ?? 0)
         : 0
       : 'text' in last
-      ? last.text?.length ?? 0
-      : 0;
+        ? (last.text?.length ?? 0)
+        : 0;
   return { index: blocks.length - 1, offset: lastLen, block: last };
 };
 

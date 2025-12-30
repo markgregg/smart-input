@@ -20,8 +20,8 @@ export const useTypeaheadLookups = (
       !queryOrValues
         ? null
         : Array.isArray(queryOrValues)
-        ? queryOrValues
-        : [queryOrValues],
+          ? queryOrValues
+          : [queryOrValues],
     [queryOrValues],
   );
 
