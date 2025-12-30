@@ -52,14 +52,5 @@ export default defineConfig(async () => {
       open: false,
       sourcemapIgnoreList: false,
     },
-    optimizeDeps: {
-      exclude: [
-        '@smart-input/commitnotifier',
-        '@smart-input/core',
-        '@smart-input/dropcontent',
-        '@smart-input/reactblocks',
-        '@smart-input/typeahead',
-      ],
-    },
   };
 });
