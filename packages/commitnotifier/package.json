@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/commitnotifier",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Commit notification component for tracking and notifying content changes in smart inputs",
   "keywords": [
     "react",
@@ -17,28 +17,29 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/markgregg/open-input.git",
+    "url": "https://github.com/markgregg/smart-input.git",
     "directory": "packages/commitnotifier"
   },
-  "homepage": "https://github.com/markgregg/open-input#readme",
+  "homepage": "https://github.com/markgregg/smart-input#readme",
   "bugs": {
-    "url": "https://github.com/markgregg/open-input/issues"
+    "url": "https://github.com/markgregg/smart-input/issues"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "type": "module",
   "engines": {
     "node": ">=20.19.0"
   },
-  "main": "dist/commitnotifier.mjs",
-  "module": "dist/commitnotifier.mjs",
+  "main": "dist/commitnotifier.min.js",
+  "module": "dist/commitnotifier.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/commitnotifier.mjs",
-      "require": "./dist/commitnotifier.mjs"
+      "import": "./dist/commitnotifier.js",
+      "require": "./dist/commitnotifier.min.js"
     }
   },
   "files": [

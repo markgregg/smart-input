@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/typeahead",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Typeahead autocomplete and lookup component for building smart input experiences",
   "keywords": [
     "react",
@@ -19,30 +19,31 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/markgregg/open-input.git",
+    "url": "https://github.com/markgregg/smart-input.git",
     "directory": "packages/typeahead"
   },
-  "homepage": "https://github.com/markgregg/open-input#readme",
+  "homepage": "https://github.com/markgregg/smart-input#readme",
   "bugs": {
-    "url": "https://github.com/markgregg/open-input/issues"
+    "url": "https://github.com/markgregg/smart-input/issues"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "type": "module",
   "engines": {
     "node": ">=20.19.0"
   },
-  "main": "dist/typeahead.mjs",
-  "module": "dist/typeahead.mjs",
+  "main": "dist/typeahead.min.js",
+  "module": "dist/typeahead.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/typeahead.mjs",
-      "require": "./dist/typeahead.mjs"
+      "import": "./dist/typeahead.js",
+      "require": "./dist/typeahead.min.js"
     },
-    "./style.css": "./dist/typeahead.css"
+    "./style.css": "./dist/typeahead.min.css"
   },
   "files": [
     "dist"

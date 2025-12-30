@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/dragblocks",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Drag and drop styled blocks handler for building interactive content editors",
   "keywords": [
     "react",
@@ -18,30 +18,31 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/markgregg/open-input.git",
+    "url": "https://github.com/markgregg/smart-input.git",
     "directory": "packages/dragblocks"
   },
-  "homepage": "https://github.com/markgregg/open-input#readme",
+  "homepage": "https://github.com/markgregg/smart-input#readme",
   "bugs": {
-    "url": "https://github.com/markgregg/open-input/issues"
+    "url": "https://github.com/markgregg/smart-input/issues"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "type": "module",
   "engines": {
     "node": ">=20.19.0"
   },
-  "main": "dist/dragblocks.mjs",
-  "module": "dist/dragblocks.mjs",
+  "main": "dist/dragblocks.min.js",
+  "module": "dist/dragblocks.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/dragblocks.mjs",
-      "require": "./dist/dragblocks.mjs"
+      "import": "./dist/dragblocks.js",
+      "require": "./dist/dragblocks.min.js"
     },
-    "./style.css": "./dist/dragblocks.css"
+    "./style.css": "./dist/dragblocks.min.css"
   },
   "files": [
     "dist"
