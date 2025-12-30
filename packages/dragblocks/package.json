@@ -63,13 +63,14 @@
     "prettier": "prettier --write src"
   },
   "peerDependencies": {
-    "@smart-input/core": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
+  "dependencies": {
+    "@smart-input/core": "workspace:*"
+  },
   "devDependencies": {
     "@nabla/vite-plugin-eslint": "^2.0.6",
-    "@smart-input/core": "workspace:*",
     "@types/node": "^22.10.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
