@@ -36,11 +36,17 @@ jobs:
       run: pnpm build
     
     - name: Install Playwright Browsers
-      run: pnpm --filter @open-input/test exec playwright install --with-deps
+      run: |
+        mkdir -p ${{ github.workspace }}/.cache/playwright-${{ matrix.node-version }}
+        pnpm --filter @open-input/test exec playwright install --with-deps
+      env:
+        PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.cache/playwright-${{ matrix.node-version }}
     
     - name: Run E2E tests
-      run: pnpm test:e2e
+      run: pnpm test:e2e:ci
       continue-on-error: false
+      env:
+        PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.cache/playwright-${{ matrix.node-version }}
     
     - name: Run combined coverage
       # Note: Currently only collects unit test coverage. E2E coverage integration is a future enhancement.

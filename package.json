@@ -49,6 +49,7 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
     "test:e2e": "pnpm build && pnpm --filter @smart-input/test test:e2e",
+    "test:e2e:ci": "pnpm --filter @smart-input/test test:e2e",
     "test:e2e:ui": "pnpm build && pnpm --filter @smart-input/test test:e2e:ui",
     "test:all": "pnpm test && pnpm test:e2e",
     "test:coverage:combined": "node scripts/combined-coverage.js",

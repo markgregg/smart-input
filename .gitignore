@@ -152,3 +152,4 @@ docs/api/
 /benchmarks/results
 /.turbo/cookies
 /.turbo/daemon
+/packages/core/.turbo/daemon
