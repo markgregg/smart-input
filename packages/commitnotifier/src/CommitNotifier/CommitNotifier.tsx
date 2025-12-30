@@ -28,6 +28,8 @@ export interface CommitNotifierProps {
   historyStorageKey?: string;
   /** Whether to store documents and images in history (default: false) */
   storeDocsAndImagesToHistory?: boolean;
+  /** Clear blocks after commit (default: false) */
+  clearAfterCommit?: boolean;
 }
 
 /**
@@ -58,6 +60,7 @@ export const CommitNotifier: React.FC<CommitNotifierProps> = ({
   historyStorageKey = 'commit-history',
   enableHistory = false,
   storeDocsAndImagesToHistory = false,
+  clearAfterCommit = false,
 }) => {
   const { addKeyboardHandler, removeKeyboardHandler } = useKeyHandlers(
     (state) => state,
@@ -190,8 +193,12 @@ export const CommitNotifier: React.FC<CommitNotifierProps> = ({
           return false;
         }
         if (onCommit(items)) {
-          addToHistory(blocks);
-          setBlocks([]);
+          if (enableHistory) {
+            addToHistory(blocks);
+          }
+          if (clearAfterCommit) {
+            setBlocks([]);
+          }
         }
         return true;
       }
@@ -223,6 +230,7 @@ export const CommitNotifier: React.FC<CommitNotifierProps> = ({
     enableHistory,
     setBlocks,
     addToHistory,
+    clearAfterCommit,
   ]);
 
   return null;

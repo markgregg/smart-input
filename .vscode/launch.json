@@ -12,13 +12,20 @@
       "sourceMaps": true
     },
     {
-      "name": "Launch Chrome - Chat Example",
+      "name": "Launch Chrome - Filter Sentence Example",
       "type": "chrome",
       "request": "launch",
-      "url": "http://localhost:5173",
-      "webRoot": "${workspaceFolder}/examples/chat-input",
+      "url": "http://localhost:3001",
+      "webRoot": "${workspaceFolder}/examples/filter-sentence",
       "sourceMaps": true,
-      "preLaunchTask": "npm: example:chat"
+      "resolveSourceMapLocations": null,
+      "sourceMapPathOverrides": {
+        "../../packages/*/src/*": "${workspaceFolder}/packages/*/src/*",
+        "../packages/*/src/*": "${workspaceFolder}/packages/*/src/*",
+        "packages/*/src/*": "${workspaceFolder}/packages/*/src/*",
+        "@smart-input/*/src/*": "${workspaceFolder}/packages/*/src/*"
+      },
+      "preLaunchTask": "npm: example:filter"
     },
     {
       "name": "Launch Chrome - Ladle",

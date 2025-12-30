@@ -212,7 +212,6 @@ pnpm size
 ## 🔗 Related Documentation
 
 - [Performance Optimization Guide](../docs/PERFORMANCE.md)
-- [Build Improvements](../docs/BUILD_IMPROVEMENTS.md)
 - [Testing Guide](../docs/TESTS.md)
 
 ---

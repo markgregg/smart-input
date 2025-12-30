@@ -1,0 +1,213 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.app-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.demo-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.instructions {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+}
+
+.instructions h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.instructions ul {
+  list-style-position: inside;
+  color: #555;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.editor-wrapper {
+  margin-bottom: 30px;
+}
+
+.editor-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.clear-button {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-button:hover {
+  background: #764ba2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.clear-button:active {
+  transform: translateY(0);
+}
+
+.feature-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.feature h4 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.feature p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.data-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.data-column {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.data-column h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.field-list,
+.operator-list,
+.value-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field-card,
+.operator-card,
+.value-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.field-card:hover,
+.operator-card:hover,
+.value-card:hover {
+  background: #e9ecef;
+  transform: translateX(4px);
+}
+
+.field-card .field-name,
+.operator-card .operator-name,
+.value-card .value-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.field-card .field-type,
+.operator-card .operator-type,
+.value-card .value-type {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+/* Typeahead custom styling */
+.typeahead-field-item,
+.typeahead-operator-item,
+.typeahead-value-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  width: 100%;
+}
+
+.typeahead-field-item .field-name,
+.typeahead-operator-item .operator-name,
+.typeahead-value-item .value-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.typeahead-field-item .field-type,
+.typeahead-operator-item .operator-type,
+.typeahead-value-item .value-type {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .demo-section {
+    padding: 20px;
+  }
+
+  .feature-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .data-display {
+    grid-template-columns: 1fr;
+  }
+}

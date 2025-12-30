@@ -1,0 +1,25 @@
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  margin-right: 4px;
+}
+
+.pill-field {
+  font-weight: 600;
+}
+
+.pill-operator {
+  opacity: 0.9;
+}
+
+.pill-value {
+  font-style: italic;
+}

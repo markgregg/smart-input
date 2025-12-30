@@ -164,6 +164,7 @@ export const App = ({ testProps }: AppProps) => {
             {...testProps?.c}
             enableHistory
             storeDocsAndImagesToHistory
+            clearAfterCommit
           />
         }
         <TypeaheadLookup
