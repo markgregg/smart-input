@@ -125,8 +125,8 @@ export const UnmanagedEditor = memo(
           event.preventDefault();
           return;
         }
-        onChange(event.key === 'Enter');
         updateCursorPosition();
+        onChange(event.key === 'Enter');
       },
       [updateCursorPosition, onChange, enableLineBreaks, selectionInProgress],
     );
