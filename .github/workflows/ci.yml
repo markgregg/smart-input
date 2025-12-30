@@ -48,8 +48,15 @@ jobs:
       run: |
         # Ensure PLAYWRIGHT_BROWSERS_PATH is not set to avoid conflicts
         unset PLAYWRIGHT_BROWSERS_PATH
-        pnpm test:e2e:ci
+        echo "Starting E2E tests..."
+        # Build the test package first to ensure it's ready
+        echo "Building test package..."
+        pnpm --filter @smart-input/test build
+        echo "Test package built successfully"
+        echo "Running E2E tests..."
+        timeout 600 pnpm test:e2e:ci || (echo "E2E tests timed out or failed" && exit 1)
       continue-on-error: false
+      timeout-minutes: 15
     
     - name: Run combined coverage
       # Note: Currently only collects unit test coverage. E2E coverage integration is a future enhancement.
