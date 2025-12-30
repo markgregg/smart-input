@@ -1,4 +1,4 @@
-name: Deploy API Docs
+name: Deploy Examples to GitHub Pages
 
 on:
   push:
@@ -49,8 +49,8 @@ jobs:
       - name: Build packages
         run: pnpm build
 
-      - name: Generate API documentation
-        run: pnpm docs:api
+      - name: Build examples
+        run: pnpm --filter smart-input-examples build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -58,7 +58,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './docs/api'
+          path: './examples/smart-input-examples/dist'
 
   deploy:
     environment:
