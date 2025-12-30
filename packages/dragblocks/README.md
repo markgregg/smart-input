@@ -98,7 +98,7 @@ The package includes:
 
 ## Requirements
 
-- `@smart-input/core`: ^0.0.7
+- `@smart-input/core`: ^1.0.0
 - `react`: ^18.3.1
 - `react-dom`: ^18.3.1
 

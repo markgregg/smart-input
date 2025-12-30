@@ -254,7 +254,7 @@ Browse the source code for implementation details:
 
 This documentation is updated with each release. The version corresponds to the package version.
 
-**Current Version**: 0.0.7
+**Current Version**: 1.0.0
 
 **Last Updated**: December 2025
 

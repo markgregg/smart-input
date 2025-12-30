@@ -34,7 +34,7 @@ If applicable, add screenshots to help explain your problem.
 - OS: [e.g. Windows 11, macOS 14, Ubuntu 22.04]
 - Browser: [e.g. Chrome 120, Firefox 121, Safari 17]
 - Node Version: [e.g. 20.10.0]
-- Package Version: [e.g. @smart-input/core@0.0.7]
+- Package Version: [e.g. @smart-input/core@1.0.0]
 - React Version: [e.g. 19.2.0]
 
 ## Additional Context

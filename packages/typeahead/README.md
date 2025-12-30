@@ -362,7 +362,7 @@ For more information, see:
 ## Requirements
 
 - React 18.0.0 or higher
-- @smart-input/core 0.0.7 or higher
+- @smart-input/core 1.0.0 or higher
 - zustand 5.0.0 or higher
 
 ## License

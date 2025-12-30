@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/typeahead",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "Typeahead autocomplete and lookup component for building smart input experiences",
   "keywords": [
     "react",

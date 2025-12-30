@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2025-12-30
+
 ### Added
 - Comprehensive documentation suite including component reference, API guide, user guide, test documentation, and extension development guide
 - GitHub Actions CI/CD workflows for automated testing, linting, and releases
@@ -21,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - CommitNotifier history navigation behavior: Up arrow now stops at oldest entry, Down arrow only works when in history mode
 - Test scripts now run build step before executing E2E tests
-- Synced root package version with sub-packages (0.0.7)
+- Synced root package version with sub-packages (1.0.0)
 
 ### Fixed
 - Test execution now runs against latest built code
@@ -49,5 +51,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Copy/paste support
 - Rich text editing capabilities
 
-[Unreleased]: https://github.com/markgregg/smart-input/compare/v0.0.7...HEAD
+[Unreleased]: https://github.com/markgregg/smart-input/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/markgregg/smart-input/releases/tag/v1.0.0
 [0.0.7]: https://github.com/markgregg/smart-input/releases/tag/v0.0.7

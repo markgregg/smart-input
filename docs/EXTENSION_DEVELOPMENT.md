@@ -788,7 +788,7 @@ my-extension/
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "peerDependencies": {
-    "@smart-input/core": "^0.0.7",
+    "@smart-input/core": "^1.0.0",
     "react": "^18.0.0",
     "zustand": "^5.0.0"
   },

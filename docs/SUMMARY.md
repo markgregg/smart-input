@@ -410,4 +410,4 @@ To improve this documentation:
 
 **Last Updated**: December 2025  
 **Documentation Version**: 1.0.0  
-**Library Version**: 0.0.7
+**Library Version**: 1.0.0

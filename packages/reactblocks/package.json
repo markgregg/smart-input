@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/reactblocks",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "React component blocks with portal rendering for advanced input customization",
   "keywords": [
     "react",
