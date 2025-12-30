@@ -28,6 +28,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "type": "module",
   "engines": {
     "node": ">=20.19.0"
   },
