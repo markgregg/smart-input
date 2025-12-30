@@ -66,7 +66,7 @@
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0",
-    "@smart-input/core": ">0.0.1"
+    "@smart-input/core": "workspace:*"
   },
   "devDependencies": {
     "@nabla/vite-plugin-eslint": "^2.0.6",
