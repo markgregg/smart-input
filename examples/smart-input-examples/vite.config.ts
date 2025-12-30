@@ -6,6 +6,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(async () => {
   return {
+    base: '/open-input/',
     define: {
       'process.env.NODE_ENV': '"development"',
     },
