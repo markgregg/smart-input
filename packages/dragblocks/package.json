@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/dragblocks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Drag and drop styled blocks handler for building interactive content editors",
   "keywords": [
     "react",
@@ -63,11 +63,9 @@
     "prettier": "prettier --write src"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "dependencies": {
-    "@smart-input/core": "workspace:*"
+    "react": ">18.0.0",
+    "react-dom": ">18.0.0",
+    "@smart-input/core": ">0.0.1"
   },
   "devDependencies": {
     "@nabla/vite-plugin-eslint": "^2.0.6",

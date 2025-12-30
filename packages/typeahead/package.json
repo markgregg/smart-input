@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/typeahead",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typeahead autocomplete and lookup component for building smart input experiences",
   "keywords": [
     "react",
@@ -86,11 +86,9 @@
     "zustand": "5.0.2"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "zustand": "^5.0.0"
-  },
-  "dependencies": {
-    "@smart-input/core": "workspace:*"
+    "react": ">18.0.0",
+    "react-dom": ">18.0.0",
+    "zustand": ">5.0.0",
+    "@smart-input/core": ">0.0.1"
   }
 }
