@@ -74,6 +74,43 @@ export const UnmanagedEditor = memo(
       [ref, setElement],
     );
 
+    const updateCursorPosition = useCallback(() => {
+      if (!preRef.current) return;
+      const range = getSelectionRange(preRef.current);
+      if (range) {
+        const { characterPosition, rect } = getPositionAndRect(
+          range,
+          preRef.current,
+        );
+        updatePosition(characterPosition, rect);
+      }
+    }, [updatePosition]);
+
+    const isEditableElement = useCallback((node: Node): boolean => {
+      let element: Node | null = node;
+      while (element) {
+        if (
+          element.nodeType === Node.ELEMENT_NODE &&
+          (element as HTMLElement).contentEditable === 'false'
+        ) {
+          return false;
+        }
+        element = element.parentNode;
+      }
+      return true;
+    }, []);
+
+    const handleDeletion = useCallback(
+      (event: KeyboardEvent<HTMLPreElement>, range: Range) => {
+        event.preventDefault();
+        event.stopPropagation();
+        range.deleteContents();
+        onChange();
+        updateCursorPosition();
+      },
+      [onChange, updateCursorPosition],
+    );
+
     const handleKeyDown = useCallback(
       (event: KeyboardEvent<HTMLPreElement>) => {
         if (keyHandlers.length > 0) {
@@ -87,30 +124,37 @@ export const UnmanagedEditor = memo(
         }
         if (event.key === 'Backspace') {
           const selection = document.getSelection();
+          // Only run custom backspace logic when no characters are selected
           if (selection && selection.rangeCount > 0 && selection.isCollapsed) {
             const range = selection.getRangeAt(0);
             const startContainer = range.startContainer;
             // Check if the block at the current position is editable
-            let isEditable = true;
-            let element: Node | null = startContainer;
-            while (element) {
-              if (
-                element.nodeType === Node.ELEMENT_NODE &&
-                (element as HTMLElement).contentEditable === 'false'
-              ) {
-                isEditable = false;
-                break;
-              }
-              element = element.parentNode;
-            }
-            if (isEditable && range.startOffset > 0) {
+            if (isEditableElement(startContainer) && range.startOffset > 0) {
               // Delete the previous character
               range.setStart(startContainer, range.startOffset - 1);
-              range.deleteContents();
-              event.preventDefault();
-              event.stopPropagation();
-              onChange();
-              updateCursorPosition();
+              handleDeletion(event, range);
+            }
+          }
+        }
+        if (event.key === 'Delete') {
+          const selection = document.getSelection();
+          // Only run custom delete logic when no characters are selected
+          if (selection && selection.rangeCount > 0 && selection.isCollapsed) {
+            const range = selection.getRangeAt(0);
+            const startContainer = range.startContainer;
+            // Check if the block at the current position is editable
+            if (isEditableElement(startContainer)) {
+              // Check if there is a next character and if it's in an editable element
+              const testRange = range.cloneRange();
+              testRange.setEnd(startContainer, range.startOffset + 1);
+              if (
+                testRange.toString().length > 0 &&
+                isEditableElement(testRange.endContainer)
+              ) {
+                // Delete the next character
+                range.setEnd(startContainer, range.startOffset + 1);
+                handleDeletion(event, range);
+              }
             }
           }
         }
@@ -127,20 +171,15 @@ export const UnmanagedEditor = memo(
           return;
         }
       },
-      [onUndo, selectionInProgress, enableLineBreaks, keyHandlers, onChange],
+      [
+        onUndo,
+        selectionInProgress,
+        enableLineBreaks,
+        keyHandlers,
+        isEditableElement,
+        handleDeletion,
+      ],
     );
-
-    const updateCursorPosition = useCallback(() => {
-      if (!preRef.current) return;
-      const range = getSelectionRange(preRef.current);
-      if (range) {
-        const { characterPosition, rect } = getPositionAndRect(
-          range,
-          preRef.current,
-        );
-        updatePosition(characterPosition, rect);
-      }
-    }, [updatePosition]);
 
     // Monitor pre element for position and size changes
     useElementObserver(preRef.current, updateCursorPosition);

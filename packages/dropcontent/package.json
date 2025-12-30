@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/dropcontent",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Drag and drop content handler for building rich input experiences with file and content drops",
   "keywords": [
     "react",
