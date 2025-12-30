@@ -62,8 +62,7 @@ function ChatInputApp() {
       <div className="chat-header">
         <h1>Chat Input Example</h1>
         <p>
-          Type a message and press Enter to send. Drag images or documents to
-          attach.
+          Type a message, and/or drag images or documents. Press Enter to send.
         </p>
       </div>
 
