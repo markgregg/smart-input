@@ -29,7 +29,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.19.0"
   },
   "main": "dist/reactblocks.min.js",
   "module": "dist/reactblocks.min.mjs",

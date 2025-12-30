@@ -1,8 +1,19 @@
 import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@src': resolve(__dirname, 'packages/core/src'),
+      '@components': resolve(__dirname, 'packages/core/src/components'),
+      '@atypes': resolve(__dirname, 'packages/core/src/types'),
+      '@hooks': resolve(__dirname, 'packages/core/src/hooks'),
+      '@state': resolve(__dirname, 'packages/core/src/state'),
+      '@utils': resolve(__dirname, 'packages/core/src/utils'),
+    },
+  },
   test: {
     globals: true,
     environment: 'jsdom',

@@ -1,14 +1,15 @@
 {
   "$schema": "https://typedoc.org/schema.json",
-  "entryPoints": [
-    "packages/core/src/index.ts",
-    "packages/typeahead/src/index.ts",
-    "packages/reactblocks/src/index.ts",
-    "packages/dragblocks/src/index.ts",
-    "packages/dropcontent/src/index.ts",
-    "packages/commitnotifier/src/index.ts"
+  "entryPoints": ["packages/core/src/index.ts"],
+  "entryPointStrategy": "expand",
+  "exclude": [
+    "dist/**/*",
+    "node_modules/**/*",
+    "**/*.test.*",
+    "**/*.spec.*",
+    "**/*.stories.*",
+    "**/*.bench.*"
   ],
-  "entryPointStrategy": "packages",
   "out": "docs/api",
   "name": "Open Input API Documentation",
   "includeVersion": true,
