@@ -63,6 +63,7 @@
     "test:coverage": "vitest --coverage"
   },
   "devDependencies": {
+    "@smart-input/core": "workspace:*",
     "@eslint/js": "9.39.0",
     "@nabla/vite-plugin-eslint": "2.0.6",
     "@types/node": "24.9.2",

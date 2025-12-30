@@ -4,6 +4,8 @@ import {
   BlockType,
   useBlockRerenderHandlers,
   StyledBlockElement,
+  Block,
+  StyledBlock,
 } from '@smart-input/core';
 import { ReactBlockComponent } from '../../types';
 import { ReactBlockRenderer } from '../ReactBlockRenderer';
@@ -44,14 +46,14 @@ export const ReactBlocksManager: React.FC<ReactBlocksManagerProps> = ({
   reactBlocks = [],
 }) => {
   const [readyBlocks, setReadyBlocks] = useState<ReactBlockComponentKey[]>([]);
-  const { blocks } = useBlocks((s) => s);
+  const { blocks } = useBlocks((s: any) => s);
   const { addBlockRerenderHandlers, removeBlockRerenderHandlers } =
-    useBlockRerenderHandlers((s) => s);
+    useBlockRerenderHandlers((s: any) => s);
 
   useEffect(() => {
-    const blockIds = blocks
-      .filter((b) => b.type === BlockType.Styled)
-      .map((b) => b.id);
+    const blockIds = (
+      blocks.filter((b: Block) => b.type === BlockType.Styled) as StyledBlock[]
+    ).map((b) => b.id);
 
     const newBlocks = reactBlocks.filter(({ blockId }) =>
       blockIds.includes(blockId),

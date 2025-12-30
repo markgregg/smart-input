@@ -219,10 +219,6 @@ importers:
         version: 6.0.3(typescript@5.9.3)(vite@7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
 
   packages/commitnotifier:
-    dependencies:
-      '@smart-input/core':
-        specifier: workspace:*
-        version: link:../core
     devDependencies:
       '@eslint/js':
         specifier: 9.39.0
@@ -230,6 +226,9 @@ importers:
       '@nabla/vite-plugin-eslint':
         specifier: 2.0.6
         version: 2.0.6(eslint@9.39.0(jiti@2.6.1))(vite@7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
+      '@smart-input/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/node':
         specifier: 24.9.2
         version: 24.9.2
@@ -359,14 +358,13 @@ importers:
         version: 5.0.2(@types/react@18.3.12)(react@18.3.1)
 
   packages/dragblocks:
-    dependencies:
-      '@smart-input/core':
-        specifier: workspace:*
-        version: link:../core
     devDependencies:
       '@nabla/vite-plugin-eslint':
         specifier: ^2.0.6
         version: 2.0.6(eslint@9.39.0(jiti@2.6.1))(vite@7.1.12(@types/node@22.19.3)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
+      '@smart-input/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/node':
         specifier: ^22.10.2
         version: 22.19.3
@@ -405,10 +403,6 @@ importers:
         version: 2.2.2(vite@7.1.12(@types/node@22.19.3)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
 
   packages/dropcontent:
-    dependencies:
-      '@smart-input/core':
-        specifier: workspace:*
-        version: link:../core
     devDependencies:
       '@eslint/js':
         specifier: 9.39.0
@@ -416,6 +410,9 @@ importers:
       '@nabla/vite-plugin-eslint':
         specifier: 2.0.6
         version: 2.0.6(eslint@9.39.0(jiti@2.6.1))(vite@7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
+      '@smart-input/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/node':
         specifier: 24.9.2
         version: 24.9.2
@@ -475,11 +472,10 @@ importers:
         version: 5.0.2(@types/react@18.3.12)(react@18.3.1)
 
   packages/reactblocks:
-    dependencies:
+    devDependencies:
       '@smart-input/core':
         specifier: workspace:*
         version: link:../core
-    devDependencies:
       '@types/react':
         specifier: 18.3.12
         version: 18.3.12
@@ -615,10 +611,6 @@ importers:
         version: 7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2)
 
   packages/typeahead:
-    dependencies:
-      '@smart-input/core':
-        specifier: workspace:*
-        version: link:../core
     devDependencies:
       '@eslint/js':
         specifier: 9.39.0
@@ -626,6 +618,9 @@ importers:
       '@nabla/vite-plugin-eslint':
         specifier: 2.0.6
         version: 2.0.6(eslint@9.39.0(jiti@2.6.1))(vite@7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
+      '@smart-input/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/node':
         specifier: 24.9.2
         version: 24.9.2
