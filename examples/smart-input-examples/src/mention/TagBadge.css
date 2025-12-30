@@ -1,11 +1,10 @@
-.user-mention {
+.tag-badge {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   padding: 2px 8px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  border-radius: 12px;
+  border-radius: 10px;
   font-size: 0.9em;
   font-weight: 500;
   cursor: pointer;
@@ -14,16 +13,17 @@
   white-space: nowrap;
 }
 
-.user-mention:hover {
+.tag-badge:hover {
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  filter: brightness(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.mention-avatar {
-  font-size: 1.1em;
+.tag-hash {
+  font-weight: 700;
   line-height: 1;
 }
 
-.mention-username {
+.tag-name {
   line-height: 1;
 }

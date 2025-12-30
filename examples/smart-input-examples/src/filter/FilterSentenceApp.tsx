@@ -14,9 +14,6 @@ import {
   ReactBlockComponent,
 } from '@smart-input/reactblocks';
 import FilterPill from './FilterPill';
-import '@smart-input/core/style.css';
-import '@smart-input/typeahead/style.css';
-import './App.css';
 
 interface Field {
   name: string;
@@ -47,7 +44,7 @@ const fields: Field[] = [
   },
 ];
 
-function App() {
+function FilterSentenceApp() {
   const [blocks, setBlocks] = useState<Block[]>([]);
   const [reactBlocks, setReactBlocks] = useState<ReactBlockComponent[]>([]);
   const [currentStep, setCurrentStep] = useState<
@@ -238,10 +235,6 @@ function App() {
     <div className="app-container">
       <div className="app-header">
         <h1>🔍 Filter Sentence Builder</h1>
-        <p className="subtitle">
-          Build filter sentences by selecting field, operator, and value from
-          dropdowns
-        </p>
       </div>
 
       <div className="demo-section">
@@ -355,4 +348,4 @@ function App() {
   );
 }
 
-export default App;
+export default FilterSentenceApp;

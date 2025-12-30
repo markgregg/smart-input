@@ -4,44 +4,53 @@ This directory contains example implementations demonstrating how to use Open In
 
 ## Available Examples
 
-### 1. Chat Input (`chat-input/`)
-A simple chat interface demonstrating:
-- Message submission with Enter key
-- Message history display
-- Auto-focus after sending
-- Custom styling with className prop
-- CommitNotifier integration
+### Smart Input Examples (`smart-input-examples/`)
+A comprehensive tabbed interface showcasing all three main Open Input features in one application:
 
-**Packages used**: `@smart-input/core`, `@smart-input/commitnotifier`
+- **Chat Input Tab**: Message submission with file drag-and-drop support
+- **Filter Sentence Tab**: Sequential field-operator-value selection with dynamic filter pills
+- **Mention & Tagging Tab**: @mentions and #hashtags with autocomplete and interactive components
 
-### 2. Mention & Tagging System (`mention-tagging/`)
-A social media-style input with autocomplete for mentions and tags:
-- @mentions for users with typeahead search
-- #hashtags for topics with color-coded badges
-- React components rendered in styled blocks
-- Custom filtering and rendering
-- Interactive hover effects
+**Features demonstrated**:
+- Message history and auto-focus
+- Sequential dropdown selections
+- React component integration
+- Typeahead lookup with fuzzy search
+- File drag-and-drop handling
+- Interactive mentions and tags
+- Complex state management
 
-**Packages used**: `@smart-input/core`, `@smart-input/typeahead`, `@smart-input/reactblocks`
+**Packages used**: All Open Input packages (`@smart-input/core`, `@smart-input/typeahead`, `@smart-input/commitnotifier`, `@smart-input/reactblocks`, `@smart-input/dropcontent`)
 
-## Running Examples
+## Running the Example
 
-Each example is a standalone application. To run an example:
+To run the combined examples:
 
 ```bash
-cd examples/<example-name>
+cd examples/smart-input-example
 pnpm install
 pnpm dev
 ```
 
-## Example Structure
+The application will be available at `http://localhost:3004/`
 
-Each example demonstrates:
-- Basic setup and configuration
-- Component integration
-- State management
-- Custom styling
-- Extension usage
-- Best practices
+## Code Organization
 
-Refer to individual example READMEs for specific implementation details.
+The example is organized by feature:
+
+```
+src/
+├── App.tsx          # Main app with tab navigation
+├── chat/            # Chat input implementation
+├── filter/          # Filter sentence builder
+└── mention/         # Mention and tagging system
+```
+
+## Implementation Details
+
+This example shows how to:
+- Combine multiple SmartInput instances in a single application
+- Manage complex state across different features
+- Integrate all Open Input packages together
+- Create tabbed interfaces with shared components
+- Handle different interaction patterns and user experiences

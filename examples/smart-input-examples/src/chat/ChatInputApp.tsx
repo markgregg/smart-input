@@ -13,15 +13,13 @@ import {
   ReactBlockComponent,
 } from '@smart-input/reactblocks';
 import Message from './Message';
-import '@smart-input/core/style.css';
-import './App.css';
 
 interface MessageData {
   items: CommitItem[];
   timestamp: number;
 }
 
-function App() {
+function ChatInputApp() {
   const [messages, setMessages] = useState<MessageData[]>([]);
   const [reactBlocks, setReactBlocks] = useState<ReactBlockComponent[]>([]);
   const apiRef = useRef<SmartInputApi>(null);
@@ -99,6 +97,7 @@ function App() {
               enableHistory
               storeDocsAndImagesToHistory
               historyStorageKey="chat-input-history"
+              clearAfterCommit
             />
           </SmartInput>
         </ErrorBoundary>
@@ -107,4 +106,4 @@ function App() {
   );
 }
 
-export default App;
+export default ChatInputApp;

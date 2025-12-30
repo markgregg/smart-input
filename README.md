@@ -74,7 +74,7 @@ This is a pnpm workspace monorepo with the following packages:
 
 ### Examples
 
-- **chat-input** - Simple chat interface with message history
+- **smart-input-examples** - Comprehensive tabbed interface showcasing all features (chat, filtering, mentions)
 
 ## 🛠️ Development
 

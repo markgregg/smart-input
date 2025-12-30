@@ -1,9 +1,12 @@
 {
-  "name": "mention-tagging-example",
+  "name": "smart-input-examples",
   "version": "1.0.0",
   "private": true,
   "keywords": [
     "example",
+    "combined",
+    "chat",
+    "filter",
     "mention",
     "tagging",
     "demo",
@@ -18,7 +21,9 @@
   "dependencies": {
     "@smart-input/core": "workspace:*",
     "@smart-input/typeahead": "workspace:*",
+    "@smart-input/commitnotifier": "workspace:*",
     "@smart-input/reactblocks": "workspace:*",
+    "@smart-input/dropcontent": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "zustand": "^5.0.2"

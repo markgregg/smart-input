@@ -166,7 +166,7 @@ importers:
         specifier: 4.0.16
         version: 4.0.16(@types/node@24.9.2)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.4.0)(less@4.4.2)(msw@2.12.5(@types/node@24.9.2)(typescript@5.8.2))(yaml@2.8.2)
 
-  examples/chat-input:
+  examples/smart-input-example:
     dependencies:
       '@smart-input/commitnotifier':
         specifier: workspace:*
@@ -174,77 +174,9 @@ importers:
       '@smart-input/core':
         specifier: workspace:*
         version: link:../../packages/core
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-      zustand:
-        specifier: ^5.0.2
-        version: 5.0.2(@types/react@18.3.12)(react@18.3.1)
-    devDependencies:
-      '@types/react':
-        specifier: ^18.3.12
-        version: 18.3.12
-      '@types/react-dom':
-        specifier: ^18.3.1
-        version: 18.3.1
-      '@vitejs/plugin-react':
-        specifier: ^5.1.0
-        version: 5.1.0(vite@7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
-      typescript:
-        specifier: ^5.7.2
-        version: 5.8.2
-      vite:
-        specifier: ^7.1.12
-        version: 7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2)
-
-  examples/filter-sentence:
-    dependencies:
-      '@smart-input/commitnotifier':
+      '@smart-input/dropcontent':
         specifier: workspace:*
-        version: link:../../packages/commitnotifier
-      '@smart-input/core':
-        specifier: workspace:*
-        version: link:../../packages/core
-      '@smart-input/reactblocks':
-        specifier: workspace:*
-        version: link:../../packages/reactblocks
-      '@smart-input/typeahead':
-        specifier: workspace:*
-        version: link:../../packages/typeahead
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-      zustand:
-        specifier: ^5.0.2
-        version: 5.0.2(@types/react@18.3.12)(react@18.3.1)
-    devDependencies:
-      '@types/react':
-        specifier: ^18.3.12
-        version: 18.3.12
-      '@types/react-dom':
-        specifier: ^18.3.1
-        version: 18.3.1
-      '@vitejs/plugin-react':
-        specifier: ^5.1.0
-        version: 5.1.0(vite@7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2))
-      typescript:
-        specifier: ^5.7.2
-        version: 5.8.2
-      vite:
-        specifier: ^7.1.12
-        version: 7.1.12(@types/node@24.9.2)(jiti@2.6.1)(less@4.4.2)(yaml@2.8.2)
-
-  examples/mention-tagging:
-    dependencies:
-      '@smart-input/core':
-        specifier: workspace:*
-        version: link:../../packages/core
+        version: link:../../packages/dropcontent
       '@smart-input/reactblocks':
         specifier: workspace:*
         version: link:../../packages/reactblocks

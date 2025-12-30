@@ -14,9 +14,6 @@ import {
 } from '@smart-input/reactblocks';
 import UserMention from './UserMention';
 import TagBadge from './TagBadge';
-import '@smart-input/core/style.css';
-import '@smart-input/typeahead/style.css';
-import './App.css';
 
 interface User {
   id: string;
@@ -81,7 +78,7 @@ const topics: Topic[] = [
   { id: '6', name: 'discussion', color: '#00BCD4', count: 56 },
 ];
 
-function App() {
+function MentionTaggingApp() {
   const [blocks, setBlocks] = useState<Block[]>([]);
   const [reactBlocks, setReactBlocks] = useState<ReactBlockComponent[]>([]);
   const apiRef = useRef<SmartInputApi>(null);
@@ -214,10 +211,6 @@ function App() {
     <div className="app-container">
       <div className="app-header">
         <h1>🏷️ Mention & Tagging System</h1>
-        <p className="subtitle">
-          Type <strong>@</strong> to mention users or <strong>#</strong> to add
-          topic tags
-        </p>
       </div>
 
       <div className="demo-section">
@@ -332,4 +325,4 @@ function App() {
   );
 }
 
-export default App;
+export default MentionTaggingApp;

@@ -395,7 +395,7 @@ For more information, see:
 
 - **[User Guide](../../docs/USER_GUIDE.md)** - Complete usage guide
 - **[Component Reference](../../docs/COMPONENTS.md)** - Component details
-- **[Examples](../../examples/chat-input)** - Working chat example
+- **[Examples](../../examples/smart-input-examples)** - Working chat example (Chat Input tab)
 
 ## Requirements
 
