@@ -12,6 +12,10 @@ A typeahead/autocomplete lookup component for the Open Input editor. Provides in
 - 🔄 **Real-time Filtering** - Client-side or server-side filtering
 - ♿ **Accessible** - ARIA-compliant with screen reader support
 
+## 🚀 Live Demo
+
+Try the interactive examples online: **[https://markgregg.github.io/smart-input/](https://markgregg.github.io/smart-input/)**
+
 ## Installation
 
 ```bash

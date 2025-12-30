@@ -2,6 +2,10 @@
 
 This example demonstrates all three main Open Input features in a single tabbed application.
 
+## 🚀 Live Demo
+
+This example is deployed and available online: **[https://markgregg.github.io/smart-input/](https://markgregg.github.io/smart-input/)**
+
 ## Code Organization
 
 The source code is organized into directories by feature:

@@ -5,6 +5,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm version](https://badge.fury.io/js/%40smart-input%2Fcore.svg)](https://badge.fury.io/js/%40smart-input%2Fcore)
 
+## 🚀 Live Demo
+
+Try the interactive examples online: **[https://markgregg.github.io/smart-input/](https://markgregg.github.io/smart-input/)**
+
 A powerful, extensible React rich text input component library with support for styled blocks, images, documents, autocomplete, drag-and-drop, and more.
 
 ## ✨ Features

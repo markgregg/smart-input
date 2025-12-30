@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Core contenteditable components for building rich text input experiences in React",
   "keywords": [
     "react",

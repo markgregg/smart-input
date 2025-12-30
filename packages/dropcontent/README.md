@@ -12,6 +12,10 @@ A drag-and-drop content handler for the Open Input editor. Enables users to drop
 - 📊 **File Validation** - Size and type restrictions
 - ♿ **Accessible** - Keyboard alternatives for file selection
 
+## 🚀 Live Demo
+
+Try the interactive examples online: **[https://markgregg.github.io/smart-input/](https://markgregg.github.io/smart-input/)**
+
 ## Installation
 
 ```bash

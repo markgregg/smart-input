@@ -11,6 +11,8 @@ A comprehensive tabbed interface showcasing all three main Open Input features i
 - **Filter Sentence Tab**: Sequential field-operator-value selection with dynamic filter pills
 - **Mention & Tagging Tab**: @mentions and #hashtags with autocomplete and interactive components
 
+**🚀 Live Demo**: [https://markgregg.github.io/smart-input/](https://markgregg.github.io/smart-input/)
+
 **Features demonstrated**:
 - Message history and auto-focus
 - Sequential dropdown selections
