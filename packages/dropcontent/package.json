@@ -56,7 +56,7 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
-    "prettier": "prettier --write src",
+    "prettier": "prettier src",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage"

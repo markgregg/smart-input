@@ -228,7 +228,7 @@ export const Editor: FC<EditorProps> = memo(function Editor({
                 domElement.isContentEditable !== !(block.uneditable ?? false)
               ) {
                 domElement.contentEditable =
-                  block.uneditable ?? false ? 'false' : 'true';
+                  (block.uneditable ?? false) ? 'false' : 'true';
               }
               if (getElementText(domElement) !== block.text) {
                 setElementText(domElement, block.text); // element matches but text has changed
@@ -358,8 +358,8 @@ export const Editor: FC<EditorProps> = memo(function Editor({
               : b,
           )
         : isReturn
-        ? insertCarridgeReturn(preElement, newBlocks)
-        : newBlocks;
+          ? insertCarridgeReturn(preElement, newBlocks)
+          : newBlocks;
       if (isReturn) {
         updateCharacterPosition(characterPosition + 1);
       }

@@ -3,7 +3,25 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'css-mock',
+      load(id) {
+        if (id.endsWith('.css') || id.endsWith('.less')) {
+          return 'export default {}';
+        }
+      },
+    },
+  ],
+  css: true,
+  deps: {
+    inline: ['@smart-input/core', '@smart-input/typeahead'],
+  },
+  transform: {
+    '\\.css$': () => 'export default {}',
+    '\\.less$': () => 'export default {}',
+  },
   resolve: {
     alias: {
       '@src': resolve(__dirname, 'packages/core/src'),
@@ -12,6 +30,7 @@ export default defineConfig({
       '@hooks': resolve(__dirname, 'packages/core/src/hooks'),
       '@state': resolve(__dirname, 'packages/core/src/state'),
       '@utils': resolve(__dirname, 'packages/core/src/utils'),
+      '@smart-input/core': resolve(__dirname, 'packages/core/src'),
     },
   },
   test: {
@@ -23,6 +42,8 @@ export default defineConfig({
       include: ['**/*.bench.{ts,tsx}'],
       reporters: ['verbose'],
       outputFile: './benchmarks/results/benchmark-results.json',
+      css: true,
+      environment: 'jsdom',
     },
     coverage: {
       provider: 'v8',

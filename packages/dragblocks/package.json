@@ -60,7 +60,7 @@
     "test:coverage": "vitest --coverage",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
-    "prettier": "prettier --write src"
+    "prettier": "prettier src"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",

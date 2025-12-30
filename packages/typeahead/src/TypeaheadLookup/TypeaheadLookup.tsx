@@ -446,8 +446,8 @@ export const TypeaheadLookup: React.FC<TypeaheadLookupProps> = ({
         ? cursorRect.bottom
         : 0
       : cursorRect
-      ? cursorRect.top - size.height
-      : 0;
+        ? cursorRect.top - size.height
+        : 0;
   };
 
   const dynamicPosStyle: React.CSSProperties = {

@@ -1,6 +1,6 @@
 import { bench, describe } from 'vitest';
 import { render, cleanup } from '@testing-library/react';
-import { SmartInput, Editor } from '@smart-input/core';
+import { SmartInput, Editor } from '@src';
 import { TypeaheadLookup } from '../TypeaheadLookup/TypeaheadLookup';
 import type { Lookup } from '../TypeaheadLookup/typeAheadLookupProps';
 

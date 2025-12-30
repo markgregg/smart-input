@@ -117,6 +117,9 @@ importers:
       nyc:
         specifier: 17.1.0
         version: 17.1.0
+      prettier:
+        specifier: ^3.7.4
+        version: 3.7.4
       react:
         specifier: 19.2.3
         version: 19.2.3
@@ -4450,6 +4453,11 @@ packages:
   prettier@2.8.8:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
+
+  prettier@3.7.4:
+    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
+    engines: {node: '>=14'}
     hasBin: true
 
   pretty-format@27.5.1:
@@ -10417,6 +10425,8 @@ snapshots:
   prelude-ls@1.2.1: {}
 
   prettier@2.8.8: {}
+
+  prettier@3.7.4: {}
 
   pretty-format@27.5.1:
     dependencies:

@@ -17,7 +17,7 @@
     "build": "vite build",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
-    "prettier": "prettier --write src",
+    "prettier": "prettier src",
     "test:e2e": "cucumber-js tests/features --require-module ts-node/register --require \"tests/hooks/**/*.ts\" --require \"tests/steps/**/*.steps.ts\"",
     "test:e2e:ui": "playwright test --ui"
   },
