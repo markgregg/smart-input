@@ -286,14 +286,17 @@ const getSelectionRange = (preElement: HTMLPreElement) => {
     if (preElement.lastChild) {
       if (preElement.lastChild.nodeType === Node.ELEMENT_NODE) {
         range.setStartAfter(preElement.lastChild);
-      } 
+      }
       // If it's a text node, place cursor at the end of the text
       else if (preElement.lastChild.nodeType === Node.TEXT_NODE) {
-        range.setStart(preElement.lastChild, (preElement.lastChild as Text).length);
+        range.setStart(
+          preElement.lastChild,
+          (preElement.lastChild as Text).length,
+        );
       }
       range.collapse(true);
       return range;
-    }   
+    }
   }
   if (selection.rangeCount > 0) {
     return selection.getRangeAt(0);
