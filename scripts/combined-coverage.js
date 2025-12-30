@@ -11,9 +11,9 @@
  * 3. Merge coverage reports using nyc
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import * as fs from 'fs';
+import * as path from 'path';
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const COVERAGE_DIR = path.join(ROOT_DIR, 'coverage');
