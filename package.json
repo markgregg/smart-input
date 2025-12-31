@@ -64,11 +64,12 @@
     "analyze:package": "cross-env ANALYZE=true pnpm --filter",
     "verify:treeshake": "node scripts/verify-treeshaking.js",
     "benchmark": "node scripts/benchmark.js",
+    "update-peer-deps": "node scripts/update-peer-deps.js",
     "bench": "vitest bench",
     "prepare": "husky",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "pnpm build:prod && changeset publish"
+    "release": "pnpm build:prod && pnpm update-peer-deps && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "2.29.8",
