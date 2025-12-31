@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/dragblocks",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Drag and drop styled blocks handler for building interactive content editors",
   "keywords": [
     "react",
