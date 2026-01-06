@@ -34,7 +34,7 @@ jobs:
       run: pnpm lint
     
     - name: Build packages
-      run: pnpm --filter './packages/*' build && pnpm --filter './packages/*' build:prod
+      run: pnpm --filter './packages/*' exec turbo run build && pnpm --filter './packages/*' exec turbo run build:prod
     
     - name: Install Playwright Browsers
       run: pnpm --filter @smart-input/test exec playwright install --with-deps
