@@ -31,6 +31,8 @@ interface UnmanagedEditorProps {
   placeholder?: string;
   /** Custom CSS class name to apply to the editor area */
   className?: string | undefined;
+  /** Whether the editor is disabled */
+  disabled?: boolean | undefined;
 }
 
 /**
@@ -49,6 +51,7 @@ export const UnmanagedEditor = memo(
       enableLineBreaks = false,
       placeholder = 'Start typing',
       className,
+      disabled,
     } = props;
     const keyHandlers = useKeyHandlers((s) => s.keyHandlers);
     const { dragOverHandlers, dragLeaveHandlers, dropHandlers } =
@@ -277,7 +280,7 @@ export const UnmanagedEditor = memo(
       <pre
         id="si-edit-element"
         className={`${styles['editor']} ${className ?? ''}`}
-        contentEditable={true}
+        contentEditable={!disabled}
         role="textbox"
         tabIndex={0}
         aria-label={placeholder}
