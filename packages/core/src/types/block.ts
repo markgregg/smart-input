@@ -39,6 +39,8 @@ export interface StyledBlock {
   style?: CSSProperties | undefined;
   /** CSS class name to apply to the block */
   className?: string;
+  /** If true, new blocks cannot be appended after this block */
+  unappendable?: boolean | undefined;
   /** If true, the block's content cannot be edited */
   uneditable?: boolean | undefined;
   /** If true, the block cannot be deleted by the user */

@@ -115,6 +115,10 @@ export interface EditorProps {
   documentHeight?: string;
   /** Placeholder text shown when the editor is empty */
   placeholder?: string;
+  /** Whether the editor is disabled */
+  disabled?: boolean | undefined;
+  /** Called when the content of the editor changes */
+  onChange?: (text: string, blocks: Block[]) => void;
   /** Called when a block is clicked */
   onBlockClick?: (block: Block, event: MouseEvent) => void;
   /** Called when a block is double-clicked */

@@ -554,6 +554,7 @@ const insertStyledBlockAtPosition = (
   id: string,
   text: string,
   style: React.CSSProperties,
+  unappendable?: boolean,
 ) => {
   const currentBlocks = blocks ?? [];
   let blockIndex = -1;
@@ -579,8 +580,9 @@ const insertStyledBlockAtPosition = (
     newBlocks.push({
       id,
       type: BlockType.Styled,
-      text: text,
-      style: style,
+      text,
+      style,
+      unappendable,
     } as Block);
   } else {
     // Split the current block and insert the styled block
@@ -606,8 +608,9 @@ const insertStyledBlockAtPosition = (
     newBlocks.splice(blockIndex + 1, 0, {
       id,
       type: BlockType.Styled,
-      text: text,
-      style: style,
+      text,
+      style,
+      unappendable,
     } as Block);
 
     if (afterText) {

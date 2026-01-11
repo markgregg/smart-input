@@ -319,6 +319,7 @@ export const TypeaheadLookup: React.FC<TypeaheadLookupProps> = ({
                   id,
                   item.text,
                   lookup.style ?? {},
+                  true,
                 );
               if (newBlocks === null || newPosition === null) return;
               lookUpItems.current.set(id, item.text);

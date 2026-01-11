@@ -1,6 +1,6 @@
 {
   "name": "@smart-input/reactblocks",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React component blocks with portal rendering for advanced input customization",
   "keywords": [
     "react",
@@ -39,7 +39,8 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/reactblocks.js",
-      "require": "./dist/reactblocks.min.js"
+      "require": "./dist/reactblocks.min.js",
+      "default": "./dist/reactblocks.js"
     }
   },
   "files": [

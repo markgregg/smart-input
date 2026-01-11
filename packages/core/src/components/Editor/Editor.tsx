@@ -14,7 +14,7 @@ import {
 } from '@state/useState';
 import { stringifyCSSProperties } from 'react-style-stringify';
 import { UnmanagedEditor } from '@components/UnmanagedEditor';
-import { Block, BlockType, StyledBlock } from '@atypes/block';
+import { Block, BlockType, StyledBlock, TextBlock } from '@atypes/block';
 import { useMutationObserver } from '@hooks/useMutationObserver';
 import {
   createElement,
@@ -32,6 +32,7 @@ import cx from 'classnames';
 import {
   addBlockEventListeners,
   areStylesDifferent,
+  blocksToText,
   getElementText,
   setElementText,
 } from './functions';
@@ -65,6 +66,8 @@ export const Editor: FC<EditorProps> = memo(function Editor({
   className,
   placeholder = 'Start typing',
   editorClassName,
+  disabled,
+  onChange,
   ...eventHandlers
 }) {
   const preRef = useRef<HTMLPreElement | null>(null);
@@ -314,11 +317,32 @@ export const Editor: FC<EditorProps> = memo(function Editor({
               newBlocks.push(block);
             } else if (block.type === BlockType.Styled) {
               const styledBlock = block as StyledBlock;
+              let newBlock: TextBlock | null = null;
               if (getElementText(domElement) !== styledBlock.text) {
-                styledBlock.text =
-                  replaceLineFeeds(getElementText(domElement)) ?? '';
+                if (
+                  !styledBlock.unappendable ||
+                  styledBlock.text.length >=
+                    (getElementText(domElement)?.length ?? 0)
+                ) {
+                  styledBlock.text =
+                    replaceLineFeeds(getElementText(domElement)) ?? '';
+                } else {
+                  newBlock = {
+                    type: BlockType.Text,
+                    text:
+                      replaceLineFeeds(
+                        getElementText(domElement)?.replace(
+                          styledBlock.text,
+                          '',
+                        ),
+                      ) ?? '',
+                  };
+                }
               }
               newBlocks.push(styledBlock);
+              if (newBlock) {
+                newBlocks.push(newBlock);
+              }
             }
           }
         } else {
@@ -366,6 +390,7 @@ export const Editor: FC<EditorProps> = memo(function Editor({
       if (JSON.stringify(blocks) !== JSON.stringify(finalBlocks)) {
         setBlocks(finalBlocks);
         appendToBuffer(finalBlocks);
+        onChange?.(blocksToText(finalBlocks), finalBlocks);
       }
     },
     [
@@ -392,6 +417,7 @@ export const Editor: FC<EditorProps> = memo(function Editor({
         enableLineBreaks={enableLineBreaks}
         placeholder={placeholder}
         className={editorClassName}
+        disabled={disabled}
       />
     </div>
   );

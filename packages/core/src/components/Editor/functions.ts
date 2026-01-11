@@ -83,9 +83,16 @@ const areStylesDifferent = (
   return blockCss !== elementCss;
 };
 
+const blocksToText = (blocks: Block[]): string => {
+  return blocks
+    .map((b) => (b.type === 'text' || b.type === 'styled' ? b.text : ''))
+    .join('');
+};
+
 export {
   addBlockEventListeners,
   getElementText,
   setElementText,
   areStylesDifferent,
+  blocksToText,
 };

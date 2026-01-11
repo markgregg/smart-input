@@ -75,4 +75,6 @@ export type SmartInputApi = {
   getText: () => string;
   /** Gets the total character length of the editor content */
   getTextLength: () => number;
+  /** Clears all content from the editor */
+  clear: () => void;
 };

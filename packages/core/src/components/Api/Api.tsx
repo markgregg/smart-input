@@ -14,6 +14,7 @@ import {
   getSelectionRange,
   setCursorPosition,
 } from '@src/utils/functions';
+import { blocksToText } from '@src/components/Editor/functions';
 
 /**
  * Api component provides the SmartInput API interface.
@@ -106,13 +107,7 @@ export const Api = forwardRef<SmartInputApi>(function Api(_, ref) {
         setCursorPosition(element, position);
       },
       getText: (): string => {
-        return blocks
-          .map((b) =>
-            b.type === BlockType.Text || b.type === BlockType.Styled
-              ? b.text
-              : '',
-          )
-          .join('');
+        return blocksToText(blocks);
       },
       getTextLength: (): number => {
         return blocks.reduce((length, b) => {
@@ -121,6 +116,10 @@ export const Api = forwardRef<SmartInputApi>(function Api(_, ref) {
           }
           return length;
         }, 0);
+      },
+      clear: (): void => {
+        setBlocks([]);
+        updateCharacterPosition(0);
       },
     }),
     [

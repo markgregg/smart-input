@@ -1,6 +1,6 @@
 {
   "name": "smart-input",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Powerful and flexible content-editable input components for React with rich text editing, mentions, and extensibility",
   "keywords": [
     "react",

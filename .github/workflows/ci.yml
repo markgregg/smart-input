@@ -113,6 +113,9 @@ jobs:
     - name: Build packages
       run: pnpm build:prod
     
+    - name: Build examples
+      run: cd examples/smart-input-examples && pnpm build
+    
     - name: Deploy examples to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
